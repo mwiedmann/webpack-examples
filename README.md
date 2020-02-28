@@ -1,44 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Webpack Config Examples
+`yarn build-no-config` - Just by pointing webpack at a .js file it can bundle even with no configuration.
 
-## Available Scripts
+`yarn build-basic` - This is our first TypeScript build. Webpack needs to know how to handle our .tsx and .ts files so we configure it to use ts-loader.
 
-In the project directory, you can run:
+`yarn build-small` - Here we are doing our basic build again but we’ve told Webpack to use smaller bundle sizes.
 
-### `yarn start`
+`yarn build-multi` - This is our first multiple entry point Webpack build. Webpack will make 3 different sites for us based on the 3 entry points we give it. Take a look at the tree shaking differences between them.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`yarn build-multi-bug` - There is a bug with tree shaking when doing multiple entry points. We avoided this in the previous build-multi by having webpack handle them separately.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+`yarn build-multi-small` - In this final build we are using smaller bundle sizes for our multi build. Even though tree shaking still isn’t working here, we gain some other benefits because webpack sees that some of the entry points share code so it is sharing .js files.
