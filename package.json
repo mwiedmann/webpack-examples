@@ -1,57 +1,34 @@
 {
-  "name": "webpack-example",
-  "version": "0.1.0",
-  "private": true,
+  "name": "webpack-examples",
+  "version": "1.0.0",
   "sideEffects": false,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.3.1",
+    "uuid": "7.0.1"
+  },
+  "devDependencies": {
+    "@types/html-webpack-plugin": "^3.2.2",
+    "html-webpack-plugin": "4.0.0-beta.11",
     "shx": "0.3.2",
     "typescript": "~3.7.2",
     "ts-loader": "6.2.1",
     "ts-node": "8.6.2",
     "webpack": "4.41.6",
     "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.10.3",
-    "html-webpack-plugin": "4.0.0-beta.11",
-    "uuid": "7.0.1"
+    "webpack-dev-server": "3.10.3"
   },
   "scripts": {
-    "start": "webpack-dev-server --config webpack-small-chunks.ts --mode production --host localhost --port 3000 --inline --progress --watch --history-api-fallback",
+    "start": "webpack-dev-server --config webpack-multi-page-array.js --mode production --host localhost --port 3000 --inline --progress --watch --history-api-fallback",
     "clean": "shx rm -rf dist",
     "build-no-config": "yarn clean && webpack js-only/main.js --mode production",
     "build-basic": "yarn clean && webpack --config webpack-basic.js --mode production",
     "build-small": "yarn clean && webpack --config webpack-small-chunks.js --mode production",
     "build-multi": "yarn clean && webpack --config webpack-multi-page-array.js --mode production",
     "build-multi-bug": "yarn clean && webpack --config webpack-multi-page-shake-bug.js --mode production",
-    "build-multi-small": "yarn clean && webpack --config webpack-multi-page-small.js --mode production --experimental-modules",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/html-webpack-plugin": "^3.2.2"
+    "build-multi-small": "yarn clean && webpack --config webpack-multi-page-small.js --mode production --experimental-modules"
   }
 }
