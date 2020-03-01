@@ -5,6 +5,8 @@
 
 `yarn build-small` - Here we are doing our basic build again but we’ve told Webpack to use smaller bundle sizes.
 
+`yarn build-basic-css` - This shows webpacks ability to import css files using css-loader and inject into the dom with style-loader.
+
 `yarn build-multi` - This is our first multiple entry point Webpack build. Webpack will make 3 different sites for us based on the 3 entry points we give it. Take a look at the tree shaking differences between them.
 
 `yarn build-multi-bug` - There is a bug with tree shaking when doing multiple entry points. We avoided this in the previous build-multi by having webpack handle them separately.
