@@ -4,15 +4,15 @@
   "license": "MIT",
   "sideEffects": false,
   "dependencies": {
-    "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "uuid": "7.0.1"
   },
   "devDependencies": {
     "@types/html-webpack-plugin": "^3.2.2",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
     "html-webpack-plugin": "4.0.0-beta.11",
     "shx": "0.3.2",
     "typescript": "~3.7.2",
