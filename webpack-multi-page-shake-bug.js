@@ -1,5 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/**
+ * This demonstrates multiple entries grouped together. This allows webpack to share bundles (which is great)
+ * but it does introduce a tree shaking problem where tree shaking doesn't work correctly
+ * so you end up with unneeded code in some bundles.
+ */
 const config = {
   entry: {
     main: './src/main/index.tsx',

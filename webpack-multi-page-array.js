@@ -1,5 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/**
+ * This demonstrates multiple entry points. Each will generate its own html file and bundles.
+ */
 module.exports = ['main', 'admin', 'reporting'].map(name =>
   ({
     entry: {

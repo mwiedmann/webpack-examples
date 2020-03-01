@@ -1,8 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/**
+ * Same as the basic config with with a small max chuck size to demonstrate code splitting.
+ */
 const config = {
   entry: './src/main/index.tsx',
-  // devtool: 'inline-source-map',
   module: {
     rules: [
       {

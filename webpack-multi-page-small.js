@@ -1,5 +1,8 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/**
+ * This demonstrates small bundles with multipe entry points.
+ */
 const config = {
   entry: {
     main: './src/main/index.tsx',
